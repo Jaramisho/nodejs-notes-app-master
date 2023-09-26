@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-md-4 mx-auto">
+    <div class="card bg-black text-white">
+      <div class="card-header pt-5">
+        <h4 class="text-center">
+          Registrar Estudiante <!-- Account Register -->
+        </h4>
+      </div>
+      <div class="card-body">
+        <form action="/auth/signup" method="POST">
+          <div class="mb-3">
+            <label for="name">Nombre:</label>
+            <input
+              type="text"
+              class="form-control bg-dark text-white"
+              name="name"
+              placeholder="Nombre"
+              value="{{name}}"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              class="form-control bg-dark text-white"
+              name="email"
+              placeholder="Email"
+              value="{{email}}"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password">Contraseña</label>
+            <input
+              type="password"
+              class="form-control bg-dark text-white"
+              name="password"
+              placeholder="Contraseña"
+              value="{{password}}"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="confirm_password">Confirmar Contraseña:</label>
+            <input
+              type="password"
+              class="form-control bg-dark text-white"
+              name="confirm_password"
+              placeholder="Contraseña"
+              value="{{confirm_password}}"
+            />
+          </div>
+          <button class="btn btn-success btn-block">
+            Confirmar
+          </button>
+        </form>
+      </div>
+      <p class="text-center">Ya posee una cuenta registrada?
+        <a href="/auth/signin" class="text-info">Ingresar</a></p>
+    </div>
+  </div>
+</div>

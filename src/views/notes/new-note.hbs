@@ -1,0 +1,89 @@
+
+<div class="col-md-4 mx-auto">
+  PRUEBA
+  {{#each dataFound}}
+  <h2><pre>{{dia}}</pre></h2>
+  <div class="card">
+    <div class="card-header bg-dark text-center">
+      <h3 class="text-white">{{materia}}</h3>
+    </div>
+      <form action="/notes/new-note" method="POST">
+      <div class="mb-3">
+          <label for="dia">Dia:</label>
+          <input
+            type="text"
+            name="dia"
+            class="form-control"
+            placeholder= "{{dia}}"
+            value="{{dia}}"
+            autofocus
+          />
+       </div>   
+        <div class="mb-3">
+          <label for="profe">Profesor de la materia:</label>
+          <input
+            type="text"
+            name="prof"
+            class="form-control"
+            placeholder="{{profesor}}"
+            value="{{profesor}}"
+           />
+        </div>
+        
+        <div class="mb-3">
+          <label for="title">Title:</label>
+          <input
+            type="text"
+            name="title"
+            class="form-control"
+            placeholder="Title"
+            autofocus
+          />
+        </div>
+        
+        <div class="mb-3">
+          <label for="inicio">Inicio de clases:</label>
+          <input
+            type="text"
+            name="inicio"
+            class="form-control"
+            placeholder="{{inicio}}"
+            value="{{inicio}}"
+           />
+        </div>
+        <div class="mb-3">
+          <label for="fin">Fin de clases:</label>
+          <input
+            type="text"
+            name="fin"
+            class="form-control"
+            placeholder="{{fin}}"
+            value="{{fin}}"
+           />
+        </div>
+        <div class="mb-3">
+          <label for="aula">Modalidad de clases:</label>
+          <input
+            type="text"
+            name="aula"
+            class="form-control"
+            placeholder="{{aula}}"
+            value="{{aula}}"
+           />
+        </div>
+        <div class="mb-3">
+          <label for="observacion">Observacion:</label>
+          <textarea
+            name="observacion"
+            class="form-control"
+            placeholder="observacion"
+          ></textarea>
+        </div>
+        <button class="btn btn-primary w-100" type="submit">
+          Guardar
+        </button>
+      </form>
+    </div>
+  </div>
+  {{/each}}
+</div>
